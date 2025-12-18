@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  ingest:
+    build: ./services/ingest
+    container_name: ingest-service
+    volumes:
+      - ./data:/data
+    command: ["python", "ingest.py"]
+
+  analysis:
+    build: ./services/analysis
+    container_name: analysis-service
+    volumes:
+      - ./data:/data
+    depends_on:
+      - ingest
+    command: ["python", "analysis.py"]
+
+  api:
+    build: ./services/api
+    container_name: api-service
+    volumes:
+      - ./data:/data
+    ports:
+      - "5000:5000"
+    depends_on:
+      - analysis

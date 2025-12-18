@@ -4,20 +4,28 @@ from pathlib import Path
 
 app = Flask(__name__)
 
-DATA_PATH = Path("/data/results/correlation.json")
+RESULTS_DIR = Path("/data/results")
+DATA_PATH = RESULTS_DIR / "correlation.json"
+
 
 @app.route("/health")
 def health():
-    return {"status": "ok"}
+    return jsonify({"status": "ok"}), 200
+
 
 @app.route("/correlation")
 def correlation():
     if not DATA_PATH.exists():
-        return jsonify({"error": "correlation.json not found"}), 404
+        return jsonify({
+            "error": "correlation.json not found",
+            "hint": "Run analysis-service before querying this endpoint"
+        }), 404
 
-    with open(DATA_PATH) as f:
+    with DATA_PATH.open() as f:
         data = json.load(f)
-    return jsonify(data)
+
+    return jsonify(data), 200
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
