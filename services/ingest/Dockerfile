@@ -1,2 +1,11 @@
-FROM python:3.12
+FROM python:3.11-slim
+
 WORKDIR /app
+
+COPY app/ /app/
+
+RUN pip install aiohttp
+
+VOLUME ["/data"]
+
+CMD ["python", "ingest.py"]

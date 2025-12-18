@@ -1,0 +1,143 @@
+{
+  "timestamp": "2025-12-18T20:45:17.960153",
+  "domains": [
+    "eltiempo.com",
+    "elespectador.com"
+  ],
+  "results": [
+    [
+      {
+        "urlkey": "com,eltiempo)/robots.txt",
+        "timestamp": "20250613010228",
+        "url": "https://www.eltiempo.com/robots.txt",
+        "mime": "text/plain",
+        "mime-detected": "text/plain",
+        "status": "200",
+        "digest": "NNI62HFHOGEV3IRYQEM57TC5JQR5AU2S",
+        "length": "2289",
+        "offset": "1138192",
+        "filename": "crawl-data/CC-MAIN-2025-26/segments/1749709481201.32/robotstxt/CC-MAIN-20250612234600-20250613024600-00525.warc.gz"
+      },
+      {
+        "urlkey": "com,eltiempo)/robots.txt",
+        "timestamp": "20250613030030",
+        "url": "https://www.eltiempo.com/robots.txt",
+        "mime": "text/plain",
+        "mime-detected": "text/plain",
+        "status": "200",
+        "digest": "NNI62HFHOGEV3IRYQEM57TC5JQR5AU2S",
+        "length": "2285",
+        "offset": "1230111",
+        "filename": "crawl-data/CC-MAIN-2025-26/segments/1749709481231.7/robotstxt/CC-MAIN-20250613025422-20250613055422-00525.warc.gz"
+      },
+      {
+        "urlkey": "com,eltiempo)/robots.txt",
+        "timestamp": "20250613091338",
+        "url": "https://www.eltiempo.com/robots.txt",
+        "mime": "text/plain",
+        "mime-detected": "text/plain",
+        "status": "200",
+        "digest": "NNI62HFHOGEV3IRYQEM57TC5JQR5AU2S",
+        "length": "2282",
+        "offset": "1219889",
+        "filename": "crawl-data/CC-MAIN-2025-26/segments/1749709481248.3/robotstxt/CC-MAIN-20250613090809-20250613120809-00525.warc.gz"
+      },
+      {
+        "urlkey": "com,eltiempo)/robots.txt",
+        "timestamp": "20250613132955",
+        "url": "https://www.eltiempo.com/robots.txt",
+        "mime": "text/plain",
+        "mime-detected": "text/plain",
+        "status": "200",
+        "digest": "NNI62HFHOGEV3IRYQEM57TC5JQR5AU2S",
+        "length": "2286",
+        "offset": "1211245",
+        "filename": "crawl-data/CC-MAIN-2025-26/segments/1749709481263.26/robotstxt/CC-MAIN-20250613121646-20250613151646-00525.warc.gz"
+      },
+      {
+        "urlkey": "com,eltiempo)/robots.txt",
+        "timestamp": "20250613183221",
+        "url": "https://www.eltiempo.com/robots.txt",
+        "mime": "text/plain",
+        "mime-detected": "text/plain",
+        "status": "200",
+        "digest": "NNI62HFHOGEV3IRYQEM57TC5JQR5AU2S",
+        "length": "2287",
+        "offset": "1190986",
+        "filename": "crawl-data/CC-MAIN-2025-26/segments/1749709481274.27/robotstxt/CC-MAIN-20250613182932-20250613212932-00525.warc.gz"
+      }
+    ],
+    [
+      {
+        "urlkey": "com,elespectador)/",
+        "timestamp": "20250612125813",
+        "url": "https://www.elespectador.com/",
+        "mime": "text/html",
+        "mime-detected": "text/html",
+        "status": "200",
+        "digest": "OA24YDWLNITFOBJLJVMTTQ75YK4VTOSX",
+        "length": "129440",
+        "offset": "594809345",
+        "filename": "crawl-data/CC-MAIN-2025-26/segments/1749709481111.44/warc/CC-MAIN-20250612112840-20250612142840-00164.warc.gz",
+        "languages": "spa",
+        "encoding": "UTF-8"
+      },
+      {
+        "urlkey": "com,elespectador)/",
+        "timestamp": "20250612144446",
+        "url": "https://www.elespectador.com/",
+        "mime": "text/html",
+        "mime-detected": "text/html",
+        "status": "200",
+        "digest": "OQFQM6G6TI7ZBCITRI7I4GH5BHTZNR2Y",
+        "length": "127830",
+        "offset": "575322032",
+        "filename": "crawl-data/CC-MAIN-2025-26/segments/1749709481156.52/warc/CC-MAIN-20250612143044-20250612173044-00164.warc.gz",
+        "languages": "spa",
+        "encoding": "UTF-8"
+      },
+      {
+        "urlkey": "com,elespectador)/",
+        "timestamp": "20250612193553",
+        "url": "https://www.elespectador.com/",
+        "mime": "text/html",
+        "mime-detected": "text/html",
+        "status": "200",
+        "digest": "J75Q476TUJ7BLKOHCHABGT7UHCIQ42RS",
+        "length": "127969",
+        "offset": "593001668",
+        "filename": "crawl-data/CC-MAIN-2025-26/segments/1749709481188.61/warc/CC-MAIN-20250612173611-20250612203611-00164.warc.gz",
+        "languages": "spa",
+        "encoding": "UTF-8"
+      },
+      {
+        "urlkey": "com,elespectador)/",
+        "timestamp": "20250613005121",
+        "url": "https://www.elespectador.com/",
+        "mime": "text/html",
+        "mime-detected": "text/html",
+        "status": "200",
+        "digest": "L7DGGQUA3EAUQ2ZC4CMSRY7QXEHURJJE",
+        "length": "128675",
+        "offset": "649501871",
+        "filename": "crawl-data/CC-MAIN-2025-26/segments/1749709481201.32/warc/CC-MAIN-20250612234600-20250613024600-00164.warc.gz",
+        "languages": "spa",
+        "encoding": "UTF-8"
+      },
+      {
+        "urlkey": "com,elespectador)/",
+        "timestamp": "20250613031425",
+        "url": "https://www.elespectador.com/",
+        "mime": "text/html",
+        "mime-detected": "text/html",
+        "status": "200",
+        "digest": "CDOZL7KDUUK3EB7ZCBB2KU4QNHLDFBA2",
+        "length": "129735",
+        "offset": "619779619",
+        "filename": "crawl-data/CC-MAIN-2025-26/segments/1749709481231.7/warc/CC-MAIN-20250613025422-20250613055422-00164.warc.gz",
+        "languages": "spa",
+        "encoding": "UTF-8"
+      }
+    ]
+  ]
+}
