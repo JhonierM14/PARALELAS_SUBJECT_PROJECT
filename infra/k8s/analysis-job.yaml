@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: analysis-job
+  namespace: paralelas-project
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: analysis
+          image: analysis-service
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: data-pvc

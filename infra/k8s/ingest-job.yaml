@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ingest-job
+  namespace: paralelas-project
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: ingest
+          image: ingest-service
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: data-pvc

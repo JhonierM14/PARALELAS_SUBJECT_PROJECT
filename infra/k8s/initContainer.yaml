@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  namespace: paralelas-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      # InitContainer que copia el CSV al PVC antes de iniciar la API
+      initContainers:
+        - name: copy-csv
+          image: busybox
+          command: ["sh", "-c", "cp /host-data/icolcap.csv /data/raw/icolcap.csv"]
+          volumeMounts:
+            - name: data
+              mountPath: /data
+            - name: host-data
+              mountPath: /host-data
+      containers:
+        - name: api
+          image: api-service
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: data-pvc
+        - name: host-data
+          hostPath:
+            path: /absolute/path/to/your/project/data/raw
+            type: Directory
