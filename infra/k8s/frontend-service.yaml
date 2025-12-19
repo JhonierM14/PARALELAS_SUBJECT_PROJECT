@@ -6,8 +6,8 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: frontend
+    app: frontend   # coincide con la etiqueta del pod en el Deployment
   ports:
-  - port: 80
-    targetPort: 80
-    nodePort: 30001
+    - port: 80
+      targetPort: 80
+      nodePort: 30001

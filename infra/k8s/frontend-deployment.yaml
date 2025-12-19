@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: frontend-service
+        image: paralelas_subject_project-frontend:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80

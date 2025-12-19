@@ -38,5 +38,5 @@ spec:
             claimName: data-pvc
         - name: host-data
           hostPath:
-            path: /absolute/path/to/your/project/data/raw
+            path: /c/Users/yonie/OneDrive/Desktop/PARALELAS_SUBJECT_PROJECT/data/raw
             type: Directory

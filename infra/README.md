@@ -7,6 +7,9 @@
 
 ## Pasos
 
+1. Iniciar Minikube:
+minikube start --driver=docker
+
 Se recomienda usar un namespace propio para el proyecto:
 
 ```
@@ -14,10 +17,36 @@ kubectl create namespace paralelas-project
 kubectl config set-context --current --namespace=paralelas-project
 ```
 
-1. Iniciar Minikube:
-minikube start
-
 2. Aplicar los manifiestos de Kubernetes
+
+Si es la primera vez, lo mas seguro salga minikube no vea las imagenes de docker, por lo tanto ejecutar:
+
+minikube image load paralelas_subject_project-frontend:latest
+minikube image load paralelas_subject_project-api:latest
+minikube image load paralelas_subject_project-ingest:latest
+minikube image load paralelas_subject_project-analysis:latest
+
+Luego,
+
+kubectl rollout restart deployment/frontend-deployment -n paralelas-project
+kubectl rollout restart deployment/api-deployment -n paralelas-project
+
+ó
+
+minikube -p minikube docker-env --shell powershell | Invoke-Expression
+
+luego:
+
+docker build -t api-service ./services/api
+docker build -t ingest-service ./services/ingest
+docker build -t analysis-service ./services/analysis
+docker build -t frontend-service ./services/frontend
+
+Y verificar que Minikube ahora vea las imagenes:
+minikube image ls
+
+Luego,
+
 Asegúrate de estar en la raíz del proyecto:
 kubectl apply -f infra/k8s
 
@@ -36,7 +65,7 @@ ingest-job     Completed
 analysis-job   Completed
 api-deployment Running
 
-## Exponer API y FRONTEND:
+3. Exponer API y FRONTEND:
 minikube service api-service -n paralelas-project
 minikube service frontend-service -n paralelas-project
 
