@@ -1,8 +1,11 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 import json
 from pathlib import Path
 
 app = Flask(__name__)
+
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 RESULTS_DIR = Path("/data/results")
 DATA_PATH = RESULTS_DIR / "correlation.json"

@@ -36,8 +36,9 @@ ingest-job     Completed
 analysis-job   Completed
 api-deployment Running
 
-## Exponer API:
+## Exponer API y FRONTEND:
 minikube service api-service -n paralelas-project
+minikube service frontend-service -n paralelas-project
 
 # Diagnóstico y logs ¡¡¡IMPORTANTE!!!
 En caso de presentarse algun error al verificar el estado de los pods ejecutar:

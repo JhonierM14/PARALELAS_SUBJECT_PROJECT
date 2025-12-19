@@ -1,4 +1,6 @@
 {
+  "status": "no_events",
+  "message": "No se detectaron eventos suficientes para calcular correlaci\u00f3n",
   "correlation": null,
   "data_points": [
     {

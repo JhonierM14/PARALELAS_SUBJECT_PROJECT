@@ -1,2 +1,4 @@
-FROM python:3.12
-WORKDIR /app
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
